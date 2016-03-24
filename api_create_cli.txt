@@ -1,0 +1,39 @@
+ssh -T git@github.com
+Hi Celc! You've successfully authenticated, but GitHub does not provide shell access.
+$ git add .
+$ git commit -m 'first commit'
+[master (root-commit) 3f1b963] first commit
+ 6 files changed, 59 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 main.js
+ create mode 100644 package.json
+ create mode 100644 readme.markdown
+ create mode 100644 views/index.ejs
+ create mode 100644 views/layout.ejs
+$ git remote add origin https://github.com/WEMP/project-slideshow.git
+$ git push -u origin master
+Username for 'https://github.com':
+
+
+use 
+git remote add origin  git@github.com:WEMP/project-slideshow.git
+git push -u origin master
+
+or
+
+git pull -u origin master
+
+
+repo cli create
+===========
+
+curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'
+git remote add origin git@github.com:USER/REPO.git
+git push origin master
+
+
+or
+
+curl -F 'login=username' -F 'token=API Token' https://github.com/api/v2/yaml/repos/create -F name=reponame
+
+https://developer.github.com/v3/repos/#create
